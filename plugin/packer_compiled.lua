@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\lskyw\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  harpoon = {
+    loaded = true,
+    path = "C:\\Users\\lskyw\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
+    url = "https://github.com/theprimeagen/harpoon"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "C:\\Users\\lskyw\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
@@ -170,11 +175,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\lskyw\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  undotree = {
-    loaded = true,
-    path = "C:\\Users\\lskyw\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
-    url = "https://github.com/mbbill/undotree"
   }
 }
 

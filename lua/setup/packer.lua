@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-	
+
 	use {
 		'EdenEast/nightfox.nvim',
 		config = function()
@@ -26,8 +26,6 @@ return require('packer').startup(function(use)
         {run = ':TSUpdate'}
     }
 
-    use('mbbill/undotree')
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -50,6 +48,8 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
     }
-	
+
+    use('theprimeagen/harpoon')
+
 end)
 

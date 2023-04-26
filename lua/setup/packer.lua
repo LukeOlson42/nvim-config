@@ -4,9 +4,9 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use {
-		'EdenEast/nightfox.nvim',
+		'sainnhe/sonokai',
 		config = function()
-			vim.cmd('colorscheme nightfox')
+			vim.cmd('colorscheme sonokai')
 		end
 	}
 
@@ -52,4 +52,3 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
 
 end)
-

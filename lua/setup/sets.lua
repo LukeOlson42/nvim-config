@@ -1,10 +1,14 @@
-vim.opt.nu = true
-vim.opt.rnu = true
+local set = vim.opt
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+set.nu = true
+set.relativenumber = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.expandtab = true
+set.scrolloff = 8
+set.cursorline = true
+set.termguicolors = false
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+set.hlsearch = false
+set.incsearch = true

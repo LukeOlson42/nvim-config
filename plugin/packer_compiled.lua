@@ -166,7 +166,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   sonokai = {
-    config = { "\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme sonokai\bcmd\bvim\0" },
+    config = { "\27LJ\2\n \1\0\0\3\0\5\0\r6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\1K\0\1\0\24colorscheme sonokai-let g:sonokai_disable_italic_comment = 1$let g:sonokai_enable_italic = 0\bcmd\bvim\0" },
     loaded = true,
     path = "C:\\Users\\lukeolso\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\sonokai",
     url = "https://github.com/sainnhe/sonokai"
@@ -181,7 +181,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: sonokai
 time([[Config for sonokai]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme sonokai\bcmd\bvim\0", "config", "sonokai")
+try_loadstring("\27LJ\2\n \1\0\0\3\0\5\0\r6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\1K\0\1\0\24colorscheme sonokai-let g:sonokai_disable_italic_comment = 1$let g:sonokai_enable_italic = 0\bcmd\bvim\0", "config", "sonokai")
 time([[Config for sonokai]], false)
 
 _G._packer.inside_compile = false

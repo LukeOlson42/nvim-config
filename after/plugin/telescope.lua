@@ -5,6 +5,6 @@ vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
-vim.keymap.set('n', '<leader>pog', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>find', builtin.live_grep, {})
 
 

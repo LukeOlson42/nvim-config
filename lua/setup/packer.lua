@@ -6,6 +6,8 @@ return require('packer').startup(function(use)
 	use {
 		'sainnhe/sonokai',
 		config = function()
+            vim.cmd('let g:sonokai_enable_italic = 0')
+            vim.cmd('let g:sonokai_disable_italic_comment = 1')
 			vim.cmd('colorscheme sonokai')
 		end
 	}
@@ -31,7 +33,7 @@ return require('packer').startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
+            {'neovim/nvim-lspconfig'},             -- Requirrd
             {'williamboman/mason.nvim'},           -- Optional
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
@@ -50,5 +52,6 @@ return require('packer').startup(function(use)
     }
 
     use('theprimeagen/harpoon')
+
 
 end)

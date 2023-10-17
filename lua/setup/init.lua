@@ -1,3 +1,5 @@
 require("setup.remap")
-require("setup.packer")
+require("setup.lazy")
 require("setup.sets")
+require("setup.cmds")
+require("setup.clangd")

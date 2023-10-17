@@ -1,8 +1,8 @@
-require('lualine').setup {
+require('lualine').setup({
   options = {
     icons_enabled = false,
     theme = 'auto',
-    component_separators = '',
+    component_separators = '|',
     section_separators = '',
     disabled_filetypes = {
       statusline = {},
@@ -33,9 +33,9 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
   winbar = {},
+  tabline = {},
   inactive_winbar = {},
   extensions = {}
-}
+})
 

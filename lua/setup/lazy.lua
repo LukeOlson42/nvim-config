@@ -57,5 +57,4 @@ require("lazy").setup({
     {'theprimeagen/harpoon'},
 
     {'echasnovski/mini.nvim', version = '*'},
-
 })

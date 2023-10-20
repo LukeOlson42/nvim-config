@@ -31,5 +31,7 @@ vim.api.nvim_set_hl(0, 'CursorLineNr', {
 })
 set.termguicolors = true 
 
+set.swapfile = false
+
 vim.cmd("let g:netrw_sort_sequence = '[\\/]$,*,\\.bak$,\\.o$,\\*.[h|c]$,\\.info$,\\.swp$,\\.obj$'")
 vim.cmd("set splitright") -- opens vsplits on right

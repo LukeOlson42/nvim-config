@@ -1,7 +1,7 @@
 require('lualine').setup({
   options = {
     icons_enabled = false,
-    theme = 'auto',
+    theme = 'sonokai',
     component_separators = '|',
     section_separators = '',
     disabled_filetypes = {

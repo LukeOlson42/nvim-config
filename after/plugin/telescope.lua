@@ -13,7 +13,7 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>goto', builtin.git_files, {})
 
 -- built in grep search pog
-vim.keymap.set('n', '<leader>get', function()
+vim.keymap.set('n', '<leader>grep', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 

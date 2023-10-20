@@ -28,3 +28,4 @@ remap('n', "<leader>grab", "[mkv][")
 remap('i', "<C-c>", "<Esc>l")
 remap('v', "<C-c>", "<Esc>")
 
+

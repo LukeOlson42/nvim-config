@@ -6,6 +6,9 @@ remap("n", "U", "<C-r>")
 remap('n', '<leader>new', 'o<Esc>k')
 remap("n", "<leader>out", vim.cmd.Ex)
 
+-- The best copy-paste keybind ever
+remap({'n', 'v'}, "P", '"+p')
+
 -- expand braces
 -- remap("i", "<C-[>", "{<CR><LF>}<Esc>ki<Tab>")
 -- remap("i", "[", "[]<Esc>i") -- maybe make command to enable brace expansion?

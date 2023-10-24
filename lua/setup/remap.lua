@@ -8,27 +8,35 @@ remap("n", "<leader>out", vim.cmd.Ex)
 
 -- The best copy-paste keybind ever
 remap({'n', 'v'}, "P", '"+p')
+remap('v', "Y", '"+y')
 
 -- expand braces
 -- remap("i", "<C-[>", "{<CR><LF>}<Esc>ki<Tab>")
 -- remap("i", "[", "[]<Esc>i") -- maybe make command to enable brace expansion?
+
+-- Jump to beginning or end of line
 remap("i", "<C-h>", "<C-o><S-i>") 
 remap("i", "<C-l>", "<C-o><S-a>") 
+
 -- Working with split windows
 remap("n", "<leader>sp", "<C-w>v")
 remap("n", "<C-l>", "<C-w>l")
 remap("n", "<C-h>", "<C-w>h")
 
 -- fancier text selections
-remap('n', "q", "<nop>")
-remap('n', "Q", "<nop>")
 remap('n', "<leader>l", "vab")
 remap('n', "<leader>k", "viB")
+
+-- indentation fix
 remap('n', "<leader>fix", "viB=")
-remap('n', "<leader>grab", "[mkv][")
+
+-- get rid of those macros
+remap('n', "q", "<nop>")
+remap('n', "Q", "<nop>")
 
 -- help how do i quit
 remap('i', "<C-c>", "<Esc>l")
 remap('v', "<C-c>", "<Esc>")
 
-
+-- set this one when on a unix machine
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })

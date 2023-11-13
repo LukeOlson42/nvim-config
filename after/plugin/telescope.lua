@@ -10,7 +10,6 @@ require('telescope').setup({
 
 -- ezpz search with fd
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>goto', builtin.git_files, {})
 
 -- built in grep search pog
 vim.keymap.set('n', '<leader>grep', function()
@@ -18,5 +17,5 @@ vim.keymap.set('n', '<leader>grep', function()
 end)
 
 -- ezpz search with rg
-vim.keymap.set('n', '<leader>find', builtin.live_grep, {})
+vim.keymap.set('n', '<C-f>', builtin.live_grep, {})
 

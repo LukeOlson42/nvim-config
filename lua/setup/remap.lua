@@ -5,6 +5,7 @@ local remap = vim.keymap.set
 remap("n", "U", "<C-r>")
 remap('n', '<leader>new', 'o<Esc>k')
 remap("n", "<leader>out", vim.cmd.Ex)
+remap("n", "<leader>j", '/')
 
 -- The best copy-paste keybind ever
 remap({'n', 'v'}, "P", '"+p')
@@ -26,6 +27,7 @@ remap("n", "<C-h>", "<C-w>h")
 -- fancier text selections
 remap('n', "<leader>l", "vab")
 remap('n', "<leader>k", "viB")
+remap('n', "<leader>snag", "vaBok")
 
 -- indentation fix
 remap('n', "<leader>fix", "viB=")
@@ -40,3 +42,4 @@ remap('v', "<C-c>", "<Esc>")
 
 -- set this one when on a unix machine
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+

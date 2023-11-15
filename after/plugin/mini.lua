@@ -17,18 +17,3 @@ require('mini.move').setup({
     },
 })
 
-require('mini.comment').setup({
-    options = {
-        custom_commentstring = nil,
-        ignore_blank_line = true,
-        start_of_line = false,
-        pad_comment_parts = true,
-    },
-    mappings = {
-        comment = '<leader>c',
-    },
-    hooks = {
-        pre = function() end,
-        post = function() end,
-    },
-})

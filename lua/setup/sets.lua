@@ -22,6 +22,10 @@ set.incsearch = true
 set.ignorecase = true
 set.smartcase = true
 
+-- using lualine, dont need the mode or selection count anyways
+set.showmode = false 
+set.showcmd = false
+
 -- I like having the current line highlighted
 -- with a nice gold color :)
 vim.api.nvim_set_hl(0, 'CursorLineNr', {

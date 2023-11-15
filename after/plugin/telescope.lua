@@ -3,7 +3,9 @@ local builtin = require('telescope.builtin')
 require('telescope').setup({
     defaults = {
         file_ignore_patterns = {
-            "SDK"
+            "SDK",
+            "Testing",
+            "OSDs",
         }
     }
 })
@@ -19,3 +21,5 @@ end)
 -- ezpz search with rg
 vim.keymap.set('n', '<C-f>', builtin.live_grep, {})
 
+-- documentation searching
+vim.keymap.set('n', "<leader>help", builtin.help_tags, {})

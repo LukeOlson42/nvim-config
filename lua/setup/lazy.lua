@@ -13,14 +13,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-	    'sainnhe/sonokai',
-		config = function()
+        'sainnhe/sonokai',
+        config = function()
             vim.cmd('let g:sonokai_enable_italic = 0')
             vim.cmd('let g:sonokai_disable_italic_comment = 1')
             vim.cmd('let g:sonokai_dim_inactive_windows = 1')
             vim.cmd("let g:sonokai_diagnostic_virtual_text = 'colored'")
-			vim.cmd('colorscheme sonokai')
-		end
+            vim.cmd('colorscheme sonokai')
+        end
 	},
 
 	{

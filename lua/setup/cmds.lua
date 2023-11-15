@@ -1,4 +1,6 @@
-vim.api.nvim_create_user_command("Rmbufs",
+local new_command = vim.api.nvim_create_user_command
+
+new_command("Rmbufs",
     function()
         print("Clearing background buffers...")
         vim.cmd("%bd|e#|bd#")
@@ -6,7 +8,7 @@ vim.api.nvim_create_user_command("Rmbufs",
 {})
 
 
-vim.api.nvim_create_user_command("Build",
+new_command("Build",
     function(opts)
         local args = string.gmatch(opts.args, "%S+")
 
@@ -55,7 +57,7 @@ vim.api.nvim_create_user_command("Build",
 )
 
 
-vim.api.nvim_create_user_command("Header",
+new_command("Header",
     function()
         print("Generating header from filename...")
         local filename = string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), '')
@@ -95,3 +97,12 @@ vim.api.nvim_create_user_command("Header",
     {}
 )
 
+
+new_command("Switch",
+    function(opts)
+        vim.cmd(string.format("!git switch %s", opts.fargs[1]))
+    end,
+    {
+        nargs = 1,
+    }
+)

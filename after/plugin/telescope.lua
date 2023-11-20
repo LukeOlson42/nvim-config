@@ -4,7 +4,7 @@ require('telescope').setup({
     defaults = {
         file_ignore_patterns = {
             "SDK",
-            "Testing",
+            "^(?!Jenkins).)*$",
             "OSDs",
         }
     }

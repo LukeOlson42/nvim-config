@@ -52,4 +52,5 @@ local config = {
 
 vim.keymap.set('n', '<C-m>', "<cmd>AerialToggle!<CR>")
 
+-- TODO: get this more robust for c, c++, python, lua, rust
 -- require('aerial').setup(config)

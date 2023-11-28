@@ -11,35 +11,41 @@ new_command("Rmbufs",
 new_command("Build",
     function(opts)
         local args = string.gmatch(opts.args, "%S+")
-
         local f = io.open('BuildConfigList.txt', "rb")
-        if not f then return nil end -- if no buildconfiglist, just go into [Bb]uild/ and run make
-        local content = f:read "*a"
-        f:close()
+        local bestMatch = ''
+        
+        if f then -- if no buildconfiglist, just go into [Bb]uild/ and run make
+            local content = f:read "*a"
+            f:close()
 
-        content = content:gsub("%s+", "\n")
-        local matches = {}
-        for line in string.gmatch(content, "([^\n]+)") do
-            table.insert(matches, line)
-        end
+            content = content:gsub("%s+", "\n")
+            local matches = {}
+            for line in string.gmatch(content, "([^\n]+)") do
+                table.insert(matches, line)
+            end
 
-        for arg in args do
-            local tempMatches = {}
-            local keyword = arg
+            for arg in args do
+                local tempMatches = {}
+                local keyword = arg
 
-            for k,cfg in pairs(matches) do
-                if cfg:find(string.upper(keyword)) then
-                    table.insert(tempMatches, cfg)
+                for k,cfg in pairs(matches) do
+                    if cfg:find(string.upper(keyword)) then
+                        table.insert(tempMatches, cfg)
+                    end
+                end
+                    
+                matches = {}
+                for k,v in pairs(tempMatches) do
+                    matches[k] = v
                 end
             end
-                
-            matches = {}
-            for k,v in pairs(tempMatches) do
-                matches[k] = v
-            end
+
+            bestMatch = matches[1]
+        else 
+            bestMatch = ''
         end
 
-        local cdCmd = "cd Build/" .. matches[1] .. "\r\n"  -- cd to first match
+        local cdCmd = "cd Build/" .. bestMatch .. "\r\n"  -- cd to first match
 
         vim.api.nvim_command('vsplit new')                 -- split a new window
         local win_handle = vim.api.nvim_tabpage_get_win(0) -- get the window handler

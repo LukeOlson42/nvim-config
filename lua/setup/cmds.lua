@@ -13,7 +13,7 @@ new_command("Build",
         local args = string.gmatch(opts.args, "%S+")
 
         local f = io.open('BuildConfigList.txt', "rb")
-        if not f then return nil end
+        if not f then return nil end -- if no buildconfiglist, just go into [Bb]uild/ and run make
         local content = f:read "*a"
         f:close()
 

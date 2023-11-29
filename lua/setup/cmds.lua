@@ -45,6 +45,11 @@ new_command("Build",
             bestMatch = ''
         end
 
+        if bestMatch == nil then
+            print('Failed to find configuration!')
+            return nil
+        end
+
         local cdCmd = "cd Build/" .. bestMatch .. "\r\n"  -- cd to first match
 
         vim.api.nvim_command('vsplit new')                 -- split a new window

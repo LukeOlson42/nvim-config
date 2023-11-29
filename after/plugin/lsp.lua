@@ -51,3 +51,24 @@ vim.diagnostic.config({
 })
 
 vim.opt.signcolumn = 'no'
+
+-- gotta let these ones cook a bit more
+-- vim.keymap.set('v', '<leader>test',
+--     function()
+--         local opts = {
+--             range = {
+--                 ['start'] = vim.api.nvim_buf_get_mark(0, '<'),
+--                 ['end'] = vim.api.nvim_buf_get_mark(0, '>'),
+--             },
+--             formatting_options = {
+--                 tabSize = 4,
+-- --                 ['insertSpaces'] = true,
+-- --                 ['trimTrailingWhitespace'] = true,
+-- --                 ['insertFinalNewline'] = true,
+-- --                 ['trimFinalNewlines'] = true
+--             }
+--         }
+-- 
+--         vim.lsp.buf.format(opts)
+--     end
+-- )

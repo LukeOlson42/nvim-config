@@ -46,5 +46,3 @@ remap('v', "<C-c>", "<Esc>")
 -- set this one when on a unix machine
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- gotta let these ones cook a bit more
--- remap('n', '<leader>test', vim.lsp.buf.format)

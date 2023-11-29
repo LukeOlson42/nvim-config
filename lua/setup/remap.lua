@@ -7,7 +7,10 @@ remap('n', '<leader>new', 'o<Esc>k')
 remap("n", "<leader>out", vim.cmd.Ex)
 remap("n", "<leader>j", '/')
 
--- The best copy-paste keybind ever
+-- inspect treesitter data
+remap('n', '<C-i>', function() vim.cmd("Inspect") end)
+
+-- The copy-paste keybind of all time 
 remap({'n', 'v'}, "P", '"+p')
 remap('v', "Y", '"+y')
 

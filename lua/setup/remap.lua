@@ -8,7 +8,7 @@ remap("n", "<leader>out", vim.cmd.Ex)
 remap("n", "<leader>j", '/')
 
 -- inspect treesitter data
-remap('n', '<C-I>', function() vim.cmd("Inspect") end)
+remap('n', '<A-i>', function() vim.cmd("Inspect") end)
 
 -- The copy-paste keybind of all time 
 remap({'n', 'v'}, "P", '"+p')

@@ -19,8 +19,8 @@ remap('v', "Y", '"+y')
 -- remap("i", "[", "[]<Esc>i") -- maybe make command to enable brace expansion?
 
 -- Jump to beginning or end of line
-remap("i", "<C-h>", "<C-o><S-i>") 
-remap("i", "<C-l>", "<C-o><S-a>") 
+remap("i", "<C-h>", "<C-o><S-i>")
+remap("i", "<C-l>", "<C-o><S-a>")
 
 -- Working with split windows
 remap("n", "<leader>sp", "<C-w>v")

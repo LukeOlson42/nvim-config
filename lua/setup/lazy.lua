@@ -36,7 +36,7 @@ require("lazy").setup({
     {'nvim-treesitter/nvim-treesitter'},
 
     {
-        'VonHeikemen/lsp-zero.nvim',
+        'VonHeikemen/lsp-zero.nvim', -- need to rework when we get nvim 0.10.x
         dependencies = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required

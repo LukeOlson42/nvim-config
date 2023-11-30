@@ -1,8 +1,8 @@
 local set = vim.opt
 
 -- line numbers on, no relative numbers
-set.nu = true 
-set.relativenumber = false 
+set.nu = true
+set.relativenumber = false
 
 -- tabs are 4 spaces, expand to spaces to appease the python gods
 set.tabstop = 4
@@ -23,7 +23,7 @@ set.ignorecase = true
 set.smartcase = true
 
 -- using lualine, dont need the mode or selection count anyways
-set.showmode = false 
+set.showmode = false
 set.showcmd = false
 
 -- I like having the current line highlighted
@@ -33,7 +33,7 @@ vim.api.nvim_set_hl(0, 'CursorLineNr', {
     fg = '#E7C664',  -- this is the actual sonokai yellow
     bold = true,
 })
-set.termguicolors = true 
+set.termguicolors = true
 
 set.swapfile = false
 

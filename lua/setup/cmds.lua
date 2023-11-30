@@ -13,7 +13,7 @@ new_command("Build",
         local args = string.gmatch(opts.args, "%S+")
         local f = io.open('BuildConfigList.txt', "rb")
         local bestMatch = ''
-        
+
         if f then -- if no buildconfiglist, just go into [Bb]uild/ and run make
             local content = f:read "*a"
             f:close()
@@ -33,7 +33,7 @@ new_command("Build",
                         table.insert(tempMatches, cfg)
                     end
                 end
-                    
+
                 matches = {}
                 for k,v in pairs(tempMatches) do
                     matches[k] = v
@@ -53,9 +53,8 @@ new_command("Build",
         local cdCmd = "cd Build/" .. bestMatch .. "\r\n"  -- cd to first match
 
         vim.api.nvim_command('vsplit new')                 -- split a new window
-        local win_handle = vim.api.nvim_tabpage_get_win(0) -- get the window handler
         local buf_handle = vim.api.nvim_win_get_buf(0)     -- get the buffer handler
-        jobID = vim.api.nvim_call_function("termopen", {"cmd"})
+        local jobID = vim.api.nvim_call_function("termopen", {"cmd"})
         vim.api.nvim_buf_set_option(buf_handle, 'modifiable', true)
         vim.api.nvim_buf_set_lines(buf_handle, 0, 0, true, {"ls"})
 
@@ -73,7 +72,7 @@ new_command("Header",
         print("Generating header from filename...")
         local filename = string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), '')
 
-        filename = filename:match("[^/\\]*.h$") 
+        filename = filename:match("[^/\\]*.h$")
 
         if(filename == nil)
         then
@@ -87,9 +86,9 @@ new_command("Header",
         local headerTop = '/*****************************************************************************************************************'
         local headerBot = '*****************************************************************************************************************/'
 
-        local includeFilesHeader = ' *                  Include Files' 
+        local includeFilesHeader = ' *                  Include Files'
 
-        local definesHeader      = ' *                  Defines' 
+        local definesHeader      = ' *                  Defines'
 
         local funcSigHeader      = ' *                  Function Signatures'
 
@@ -97,12 +96,12 @@ new_command("Header",
 
         local eofHeader          = ' *                  End of File'
 
-        vim.api.nvim_buf_set_lines(0, 0, 30, false, {'#ifndef ' .. headerPrep, '#define ' .. headerPrep, 
-                                                    headerTop, includeFilesHeader, headerBot, '', 
-                                                    headerTop, definesHeader, headerBot, '', 
+        vim.api.nvim_buf_set_lines(0, 0, 30, false, {'#ifndef ' .. headerPrep, '#define ' .. headerPrep,
+                                                    headerTop, includeFilesHeader, headerBot, '',
+                                                    headerTop, definesHeader, headerBot, '',
                                                     headerTop, funcSigHeader, headerBot, '',
                                                     headerTop, funcDecHeader, headerBot, '',
-                                                    headerTop, eofHeader, headerBot, 
+                                                    headerTop, eofHeader, headerBot,
                                                     '#endif'})
     end,
     {}

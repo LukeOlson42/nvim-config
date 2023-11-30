@@ -33,7 +33,6 @@ local config = {
                     if str == '' then
                         return str
                     else
-                        local labelstr = ''
                         local plural = ''
 
                         if mode == 'V' then

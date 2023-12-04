@@ -28,7 +28,7 @@ new_command("Build",
                 local tempMatches = {}
                 local keyword = arg
 
-                for k,cfg in pairs(matches) do
+                for _,cfg in pairs(matches) do
                     if cfg:find(string.upper(keyword)) then
                         table.insert(tempMatches, cfg)
                     end
@@ -41,7 +41,7 @@ new_command("Build",
             end
 
             bestMatch = matches[1]
-        else 
+        else
             bestMatch = ''
         end
 

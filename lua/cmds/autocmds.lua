@@ -14,11 +14,11 @@ autocmd('TermOpen', {
         vim.api.nvim_feedkeys('G', 'n', false)
         vim.keymap.set('n', 'q', function()      -- just click q to leave that buffer :D
             vim.cmd("bd!")
-        end,
-        {
-            buffer = true
-        }
-    )
+            end,
+            {
+                buffer = true
+            }
+       )
     end
 })
 
@@ -26,3 +26,4 @@ autocmd('BufLeave', {
     pattern = 'term:*',
     command = 'stopinsert',
 })
+

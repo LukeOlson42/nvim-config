@@ -1,6 +1,0 @@
-require("setup.remap")
-require("setup.lazy")
-require("setup.sets")
-require("setup.cmds")
-require("setup.autocmds")
-require("setup.clangd")

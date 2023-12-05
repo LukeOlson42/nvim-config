@@ -26,6 +26,10 @@ set.smartcase = true
 set.showmode = false
 set.showcmd = false
 
+set.lazyredraw = true
+set.linebreak = true
+set.splitright = true
+
 -- I like having the current line highlighted
 -- with a nice gold color :)
 vim.api.nvim_set_hl(0, 'CursorLineNr', {
@@ -38,4 +42,3 @@ set.termguicolors = true
 set.swapfile = false
 
 vim.cmd("let g:netrw_sort_sequence = '[\\/]$,*,\\.bak$,\\.o$,\\*.[h|c]$,\\.info$,\\.swp$,\\.obj$'")
-vim.cmd("set splitright") -- opens vsplits on right

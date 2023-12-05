@@ -60,12 +60,17 @@ new_command("Build",
         local jobID = vim.api.nvim_call_function("termopen", {"cmd"})
         vim.api.nvim_buf_set_option(buf_handle, 'modifiable', true)
         vim.api.nvim_buf_set_lines(buf_handle, 0, 0, true, {"ls"})
-
         vim.api.nvim_chan_send(jobID, cdCmd)
-        vim.api.nvim_chan_send(jobID, "mingw32-make\r\n")
+
+        if opts.bang then
+            vim.api.nvim_chan_send(jobID, "mingw32-make clean && mingw32-make\r\n") -- UPDATE WITH NEW OS!!!!
+        else
+            vim.api.nvim_chan_send(jobID, "mingw32-make\r\n")
+        end
     end,
     {
         nargs = '*',
+        bang = true,
     }
 )
 

@@ -11,7 +11,7 @@ new_command("Clean",
 )
 
 
-new_command("Build",
+new_command("Build", -- TODO: slide this bad boy into a local plugin :O
     function(opts)
         local args = string.gmatch(opts.args, "%S+")
         local f = io.open('BuildConfigList.txt', "rb")
@@ -55,15 +55,15 @@ new_command("Build",
 
         local cdCmd = "cd Build/" .. bestMatch .. "\r\n"  -- cd to first match
 
-        vim.api.nvim_command('vsplit new')                 -- split a new window
-        local buf_handle = vim.api.nvim_win_get_buf(0)     -- get the buffer handler
+        vim.api.nvim_command('vsplit new')
+        local buf_handle = vim.api.nvim_win_get_buf(0)
         local jobID = vim.api.nvim_call_function("termopen", {"cmd"})
         vim.api.nvim_buf_set_option(buf_handle, 'modifiable', true)
         vim.api.nvim_buf_set_lines(buf_handle, 0, 0, true, {"ls"})
         vim.api.nvim_chan_send(jobID, cdCmd)
 
         if opts.bang then
-            vim.api.nvim_chan_send(jobID, "mingw32-make clean && mingw32-make\r\n") -- UPDATE WITH NEW OS!!!!
+            vim.api.nvim_chan_send(jobID, "mingw32-make clean && mingw32-make\r\n") -- UPDATE WITH NEW OS!!!! MAKE PLATFORM AGNOSTIC!!!!
         else
             vim.api.nvim_chan_send(jobID, "mingw32-make\r\n")
         end

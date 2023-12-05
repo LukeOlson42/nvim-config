@@ -12,9 +12,13 @@ autocmd('TermOpen', {
     pattern = '',
     callback = function()
         vim.api.nvim_feedkeys('G', 'n', false)
-        vim.keymap.set('n', 'q', function()
+        vim.keymap.set('n', 'q', function()      -- just click q to leave that buffer :D
             vim.cmd("bd!")
-        end, {buffer = true})
+        end,
+        {
+            buffer = true
+        }
+    )
     end
 })
 

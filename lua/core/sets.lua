@@ -29,6 +29,7 @@ set.showcmd = false
 set.lazyredraw = true
 set.linebreak = true
 set.splitright = true
+set.swapfile = false
 
 -- I like having the current line highlighted
 -- with a nice gold color :)
@@ -39,6 +40,5 @@ vim.api.nvim_set_hl(0, 'CursorLineNr', {
 })
 set.termguicolors = true
 
-set.swapfile = false
-
-vim.cmd("let g:netrw_sort_sequence = '[\\/]$,*,\\.bak$,\\.o$,\\*.[h|c]$,\\.info$,\\.swp$,\\.obj$'")
+-- let netrw lump .c and .h files together
+vim.g.netrw_sort_sequence = '[\\/]$,*,\\.bak$,\\.o$,\\*.[h|c]$,\\.info$,\\.swp$,\\.obj$'

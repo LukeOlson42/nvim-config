@@ -1,11 +1,14 @@
 local new_command = vim.api.nvim_create_user_command
 
-new_command("Rmbufs",
+new_command("Clean",
     function()
         print("Clearing background buffers...")
         vim.cmd("%bd|e#|bd#")
     end,
-{})
+    {
+        nargs = 0
+    }
+)
 
 
 new_command("Build",

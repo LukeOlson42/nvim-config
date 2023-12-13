@@ -1,5 +1,7 @@
 local lualine = require('lualine')
 
+-- TODO: Make this look nicer and easier to add stuff
+
 local config = {
     options = {
         icons_enabled = false,
@@ -19,7 +21,11 @@ local config = {
     },
     sections = {
         lualine_a = {'mode'},
-        lualine_b = {'branch'},
+        lualine_b = {
+            {
+                'branch',
+            },
+        },
         lualine_c = {'filename'},
         lualine_x = {
             'encoding',
@@ -50,7 +56,9 @@ local config = {
                 end
             },
         },
-        lualine_y = {'progress'},
+        lualine_y = {
+            'progress',
+        },
         lualine_z = {'location'}
     },
     inactive_sections = {

@@ -11,6 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local config = {
+    ui = {
+        border = "double",
+        title = 'lazy.nvim',
+        title_pos = 'center',
+        pills = true,
+    },
+}
+
 require("lazy").setup({
 	{
         'sainnhe/sonokai',
@@ -58,4 +67,4 @@ require("lazy").setup({
 
     {'echasnovski/mini.nvim', version = '*'},
 
-})
+}, config)

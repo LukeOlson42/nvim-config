@@ -1,6 +1,6 @@
 local autocmd = vim.api.nvim_create_autocmd
 
-autocmd('CmdlineEnter', {
+autocmd('CmdlineEnter', {                                                           -- see if we can lua-ify this stuff
     command = 'command! Term :right vsplit term://$SHELL',
 })
 

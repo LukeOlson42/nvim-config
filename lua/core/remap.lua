@@ -48,3 +48,4 @@ remap('v', "<C-c>", "<Esc>")
 
 -- Keybind Testing Grounds --
 remap('n', '<A-;>', "A;<Esc>");
+

@@ -48,6 +48,11 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping.confirm({select = true}),
         ['<C-Space>'] = cmp.mapping.complete(),
     }),
+
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
 })
 
 

@@ -45,8 +45,10 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<C-u>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-d>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<Tab>'] = cmp.mapping.confirm({select = true}),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<CR>'] = cmp.mapping.confirm( {select = false} ),
     }),
 
     window = {
@@ -54,7 +56,6 @@ cmp.setup({
         documentation = cmp.config.window.bordered(),
     },
 })
-
 
 vim.diagnostic.config({
     virtual_text = true,

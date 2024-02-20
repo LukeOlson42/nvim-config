@@ -23,6 +23,10 @@ remap("i", "<C-h>", "<C-o><S-i>")
 remap("i", "<C-l>", "<C-o><S-a>")
 
 -- Working with split windows
+-- I want to see if I can map this to a function
+-- where we see the size of the terminal window, 
+-- and if its  <= SCREEN_WIDTH then we open a
+-- horizontal split
 remap("n", "<leader>sp", "<C-w>v")
 remap("n", "<C-l>", "<C-w>l")
 remap("n", "<C-h>", "<C-w>h")

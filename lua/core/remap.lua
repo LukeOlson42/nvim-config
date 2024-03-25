@@ -32,7 +32,7 @@ remap("n", "<C-l>", "<C-w>l")
 remap("n", "<C-h>", "<C-w>h")
 
 -- fancier text selections
-remap('n', "<leader>l", "vab")
+remap('n', "<leader>l", "vib")
 remap('n', "<leader>k", "viB")
 remap('n', "<leader>snag", "vaBok")
 

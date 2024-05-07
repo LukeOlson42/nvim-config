@@ -98,13 +98,9 @@ new_command("Header",
         local headerBot = '*****************************************************************************************************************/'
 
         local includeFilesHeader = ' *                  Include Files'
-
         local definesHeader      = ' *                  Defines'
-
         local funcSigHeader      = ' *                  Function Signatures'
-
         local funcDecHeader      = ' *                  Function Declaration'
-
         local eofHeader          = ' *                  End of File'
 
         vim.api.nvim_buf_set_lines(0, 0, 30, false, {'#ifndef ' .. headerPrep, '#define ' .. headerPrep,

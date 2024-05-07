@@ -12,7 +12,7 @@ new_command("Clean",
     }
 )
 
-
+--[[
 new_command("Build", -- TODO: slide this bad boy into a local plugin :O
     function(opts)
         local args = string.gmatch(opts.args, "%S+")
@@ -75,6 +75,7 @@ new_command("Build", -- TODO: slide this bad boy into a local plugin :O
         bang = true,
     }
 )
+]]--
 
 
 new_command("Header",

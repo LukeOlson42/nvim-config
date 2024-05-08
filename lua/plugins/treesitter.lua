@@ -23,8 +23,9 @@ local config = {
 
 vim.filetype.add({     --  adds groovy syntax highlighting to Jenkinsfiles
     filename = {
-        ['Jenkinsfile'] = 'groovy'
-    }
+        ['Jenkinsfile'] = 'groovy',
+        ['*.dis'] = 'asm'
+    },
 })
 
 require('nvim-treesitter.configs').setup(config)

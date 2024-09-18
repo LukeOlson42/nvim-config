@@ -44,24 +44,24 @@ require("lazy").setup({
 
     {'nvim-treesitter/nvim-treesitter'},
 
-    {
-        'VonHeikemen/lsp-zero.nvim', -- need to rework when we get nvim 0.10.x
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-        }
-    },
+--    {
+--        'VonHeikemen/lsp-zero.nvim', -- need to rework when we get nvim 0.10.x
+--        dependencies = {
+--            -- LSP Support
+--            {'neovim/nvim-lspconfig'},             -- Required
+--            {'williamboman/mason.nvim'},           -- Optional
+--            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+--
+--            -- Autocompletion
+--            {'hrsh7th/nvim-cmp'},         -- Required
+--            {'hrsh7th/cmp-nvim-lsp'},     -- Required
+--            {'hrsh7th/cmp-path'},         -- Optional
+--            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+--
+--            -- Snippets
+--            {'L3MON4D3/LuaSnip'},             -- Required
+--        }
+--    },
 
     {'theprimeagen/harpoon'},
 

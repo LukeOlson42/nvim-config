@@ -6,7 +6,6 @@ require("core/sets")
 -- custom commands/autocommands
 require("cmds/cmds")
 require("cmds/autocmds")
-require("cmds/pio")
 
 -- add in plugins
 require("plugins")
